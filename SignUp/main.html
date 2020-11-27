@@ -29,7 +29,7 @@
 	}
 	.panel {
 		width: 400px;
-		height: 500px;
+		height: 600px;
 		-webkit-border-radius: 10px;
 		-moz-border-radius: 10px;
 		border-radius: 10px;
@@ -53,13 +53,13 @@
 	.panel .state i.fa-unlock-alt {
 		margin-bottom: -10px;
 		font-size: 25px;
-		color: yellow;
+		color: rgb(44, 214, 10);
 		line-height: 33px;
 		height: 30px;
 		width: 30px;
 		display: inline-block;
-		-webkit-border-radius: 50%;
-		-moz-border-radius: 50%;
+		-webkit-border-radius: 90%;
+		-moz-border-radius: 90%;
 		border-radius: 50%;
 		border: 2px solid;
 	}
@@ -73,7 +73,7 @@
 	.panel .login {
 		height: 45px;
 		width: 100%;
-		background-color: #8bc34a;
+		background-color: #cc0000;
 		-webkit-border-radius: 45px;
 		-moz-border-radius: 45px;
 		border-radius: 45px;
@@ -97,7 +97,7 @@
 		transform: translateY(2px);
 	}
 	.panel .login:hover {
-		background-color: #599b2d;
+		background-color: #920000;
 	}
 	.panel .login:after {
 		content: "\f084";
@@ -105,11 +105,11 @@
 		position: absolute;
 		width: 45px;
 		height: 45px;
-		background-color: #599b2d;
+		background-color: #cc0000;
 		color: yellow;
-		text-shadow: 1px -1px #467a23, 2px -2px #487d24, 3px -3px #4a8025,
-			4px -4px #4b8326, 5px -5px #4d8627, 6px -6px #4f8928, 7px -7px #508c28,
-			8px -8px #528f29, 9px -9px #54922a, 10px -10px #55952b, 11px -11px #57982c;
+		text-shadow: 1px -1px #cc0000, 2px -2px #cc0000, 3px -3px #cc0000,
+			4px -4px #cc0000, 5px -5px #cc0000, 6px -6px #cc0000, 7px -7px #cc0000,
+			8px -8px #cc0000, 9px -9px #cc0000, 10px -10px #cc0000, 11px -11px #cc0000;
 		left: 0;
 		top: 0;
 		-webkit-transform: rotate(90deg);
@@ -164,16 +164,17 @@
 
 <div class="panel">
 	<div class="state">
-		<br /><i class="fa fa-unlock-alt"></i><br />
-		<h1>Welcome To</h1>
+		<br /><br />
+		<h1>Join</h1>
 		<h1>Egame Cafe</h1>
-	</div>
+    </div>
+    <br><br/>
 	<div class="form">
+        <input placeholder="Full Name" type="text" />
+        <input placeholder="Username" type="text" />
 		<input placeholder="Email" type="text" />
 		<input placeholder="Password" type="text" />
-		<div class="login">Login</div>
+		<div class="login">Sign Up</div>
 	</div>
-	<div class="fack">
-		<a href="#"><i class="fa fa-question-circle"></i>Forgot password?</a>
-	</div>
+	
 </div>

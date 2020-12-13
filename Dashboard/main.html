@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<style>
+	@import url(bootstrapcdn);
+	@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+	@import url(https://fonts.googleapis.com/css2?family=Nova+Flat&family=Rye&display=swap);
+
+	body {
+		font-family: "Nova Flat", sans-serif;
+		background: -webkit-linear-gradient(45deg, #cc0000, darkorange),
+			-webkit-linear-gradient(0deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
+		background: -moz-linear-gradient(45deg, #cc0000, darkorange),
+			-moz-linear-gradient(0deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
+		background: -o-linear-gradient(45deg, #cc0000, darkorange),
+			-o-linear-gradient(0deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
+		background: linear-gradient(45deg, #cc0000, darkorange),
+			linear-gradient(90deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
+		overflow: scroll;
+	}
+
+	.card__container {
+		position: relative;
+		padding: 1rem;
+	}
+	.card__media {
+		text-emphasis-color: yellow;
+		background: linear-gradient(135deg, #000000 10%, #cc0000 100%),
+			url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.nqd1onm71BuYZxKoBvxdJwHaEM%26pid%3DApi&f=1");
+		background-size: cover;
+		background-position: 50% 50%;
+		width: 20%;
+		height: 190px;
+		border-radius: 15px;
+		padding: 10px 20px;
+		font-size: x-large;
+		vertical-align: middle;
+		-webkit-box-shadow: 0 0 10px black;
+		-moz-box-shadow: 0 0 10px black;
+		box-shadow: 0 0 10px black;
+	}
+	.card__body {
+		position: absolute;
+		z-index: 2;
+		top: 20%;
+		left: 10%;
+		background: rgb(210, 210, 210);
+		height: 70%;
+		width: 25%;
+		border-radius: 15px;
+		-webkit-box-shadow: 0 0 10px black;
+		-moz-box-shadow: 0 0 10px black;
+		box-shadow: 0 0 10px black;
+		padding: 1rem;
+		transition: 0.25s all ease-in-out;
+		margin-left: 100px;
+		overflow: hidden;
+	}
+	.card__title {
+		font-size: 1.3rem;
+		font-weight: 700;
+	}
+	.author {
+		font-size: 0.9rem;
+		color: #888;
+	}
+
+	.card__container:hover .card__body {
+		align-content: right;
+		transform: translate(-15px, -15px);
+		width: 28%;
+		min-height: 75%;
+		height: auto;
+		-webkit-box-shadow: 0 0 10px black;
+		-moz-box-shadow: 0 0 10px black;
+		box-shadow: 0 0 10px black;
+		z-index: 100;
+	}
+	i.fa-gamepad {
+		margin-bottom: 10px;
+		font-size: 70px;
+		text-align: center;
+		color: yellow;
+		line-height: 100px;
+		height: 100px;
+		width: 100px;
+		display: inline-block;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		border: 2px solid;
+		margin-left: 10px;
+	}
+	i.fa-steam {
+		margin-bottom: 10px;
+		font-size: 70px;
+		text-align: center;
+		color: yellow;
+		line-height: 100px;
+		height: 100px;
+		width: 100px;
+		display: inline-block;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		border: 2px solid;
+		margin-left: 10px;
+	}
+	i.fa-cogs {
+		margin-bottom: 10px;
+		font-size: 70px;
+		text-align: center;
+		color: yellow;
+		line-height: 100px;
+		height: 100px;
+		width: 100px;
+		display: inline-block;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		border: 2px solid;
+		margin-left: 10px;
+	}
+	.panel {
+		position: relative;
+		right: 100px;
+		width: 500px;
+		height: auto;
+		padding-bottom: 30px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		-webkit-box-shadow: 0 0 10px black;
+		-moz-box-shadow: 0 0 10px black;
+		box-shadow: 0 0 10px black;
+		background: #141519;
+		margin: 100px auto;
+		text-align: center;
+	}
+
+	.profile-card__img {
+		width: 150px;
+		height: 150px;
+		margin-left: auto;
+		margin-right: auto;
+		transform: translateY(-50%);
+		border-radius: 50%;
+		overflow: hidden;
+		position: relative;
+		z-index: 4;
+		box-shadow: 0px 5px 50px 0px #cc0000, 0px 0px 0px 7px rgba(53, 0, 0, 0.5);
+	}
+	.bio {
+		position: relative;
+	}
+</style>
+<html>
+	<head> </head>
+	<body>
+		<div class="panel" style="float: right">
+			<div class="profile-card__img">
+				<img
+					height="150px"
+					width="150px"
+					src="https://ts5.tarafdari.com/contents/user704089/news/hooman_afazeli.jpg"
+					alt="profile card"
+				/>
+			</div>
+			<div style="text-align: center; color: yellow; margin-top: -20px">
+				Joined on Feb 2020
+			</div>
+			<br />
+			<div style="font-size: x-large; color: yellow; margin-top: 20px">
+				something about me
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card__container">
+						<div class="card__media" style="color: yellow">
+							Games I've Played
+							<br /><br />
+							<i class="fa fa-gamepad"></i>
+						</div>
+						<div class="card__body">
+							<div class="card__title">//games</div>
+							<ul>
+								<li>Dota2</li>
+								<li>R6</li>
+								<li>WITCHER</li>
+								<li>APEX</li>
+								<li>RED DEAD</li>
+								<li>GTA</li>
+								<li>CYBERPUNK</li>
+								<li>BATMAN</li>
+								<li>PUBG</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card__container">
+						<div class="card__media" style="color: yellow">
+							My Friends
+							<br /><br />
+							<i class="fa fa-steam"></i>
+						</div>
+						<div class="card__body">
+							<div class="card__title">//Friends</div>
+							<ul>
+								<li>mamad</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card__container">
+						<div class="card__media" style="color: yellow">
+							My System
+							<br /><br />
+							<i class="fa fa-cogs"></i>
+						</div>
+						<div class="card__body">
+							<div class="card__title">//system specifications</div>
+							<ul>
+								<li>RTX 3090</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

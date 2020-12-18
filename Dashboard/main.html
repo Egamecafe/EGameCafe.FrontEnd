@@ -6,13 +6,13 @@
 
 	body {
 		font-family: "Nova Flat", sans-serif;
-		background: -webkit-linear-gradient(45deg, #cc0000, darkorange),
+		background: -webkit-linear-gradient(45deg, #990000, black),
 			-webkit-linear-gradient(0deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
-		background: -moz-linear-gradient(45deg, #cc0000, darkorange),
+		background: -moz-linear-gradient(45deg, #990000, black),
 			-moz-linear-gradient(0deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
-		background: -o-linear-gradient(45deg, #cc0000, darkorange),
+		background: -o-linear-gradient(45deg, #990000, black),
 			-o-linear-gradient(0deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
-		background: linear-gradient(45deg, #cc0000, darkorange),
+		background: linear-gradient(45deg, #990000, black),
 			linear-gradient(90deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
 		overflow: scroll;
 	}
@@ -27,7 +27,7 @@
 			url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.nqd1onm71BuYZxKoBvxdJwHaEM%26pid%3DApi&f=1");
 		background-size: cover;
 		background-position: 50% 50%;
-		width: 20%;
+		width: 35%;
 		height: 190px;
 		border-radius: 15px;
 		padding: 10px 20px;
@@ -41,10 +41,10 @@
 		position: absolute;
 		z-index: 2;
 		top: 20%;
-		left: 10%;
+		left: 20%;
 		background: rgb(210, 210, 210);
 		height: 70%;
-		width: 25%;
+		width: 35%;
 		border-radius: 15px;
 		-webkit-box-shadow: 0 0 10px black;
 		-moz-box-shadow: 0 0 10px black;
@@ -66,7 +66,7 @@
 	.card__container:hover .card__body {
 		align-content: right;
 		transform: translate(-15px, -15px);
-		width: 28%;
+		width: 35%;
 		min-height: 75%;
 		height: auto;
 		-webkit-box-shadow: 0 0 10px black;
@@ -121,17 +121,18 @@
 	}
 	.panel {
 		position: relative;
-		right: 100px;
-		width: 500px;
+		right: 50px;
+		width: 350px;
 		height: auto;
+		max-height: 635px;
 		padding-bottom: 30px;
 		-webkit-border-radius: 10px;
 		-moz-border-radius: 10px;
 		border-radius: 10px;
-		-webkit-box-shadow: 0 0 10px black;
-		-moz-box-shadow: 0 0 10px black;
-		box-shadow: 0 0 10px black;
-		background: #141519;
+		-webkit-box-shadow: 0 0 10px #990000;
+		-moz-box-shadow: 0 0 10px #990000;
+		box-shadow: 0 0 10px #990000;
+		background: #000;
 		margin: 100px auto;
 		text-align: center;
 	}
@@ -148,10 +149,162 @@
 		z-index: 4;
 		box-shadow: 0px 5px 50px 0px #cc0000, 0px 0px 0px 7px rgba(53, 0, 0, 0.5);
 	}
-	.bio {
-		position: relative;
+
+	.activity-body {
+		margin-right: 8%;
 	}
+
+	.activity-feed {
+		background-color: rgb(210, 210, 210);
+		border-radius: 15px;
+		-webkit-box-shadow: 0 0 10px black;
+		-moz-box-shadow: 0 0 10px black;
+		box-shadow: 0 0 10px black;
+		padding: 15px;
+		list-style: none;
+		overflow: scroll;
+		width: 400px;
+		height: 635px;
+	}
+	.activity-feed .feed-item .image {
+		width: 38px;
+		height: 38px;
+		margin-top: 7px;
+		margin-left: auto;
+		margin-right: auto;
+		transform: translateY(-50%);
+		border-radius: 50%;
+		overflow: hidden;
+		position: absolute;
+		z-index: 4;
+		box-shadow: 0px 2px 4px 0px #cc0000, 0px 0px 0px 2px rgba(53, 0, 0, 0.5);
+
+	}
+	.activity-feed .feed-item {
+		position: relative;
+		margin-bottom: 25px;
+		margin-top: 10px;
+		padding-bottom: 40px;
+		padding-left: 30px;
+		border-left: 2px solid black;
+		border-bottom: 2px solid black;
+		border-radius: 10px;
+	}
+	.activity-feed .feed-item:last-child {
+		border-color: black;
+	}
+	.activity-feed .feed-item::after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: -6px;
+		width: 10px;
+		height: 10px;
+		border-radius: 6px;
+		background: #cc0000;
+		border: 2px solid #000000;
+	}
+	.activity-feed .feed-item .date {
+		display: block;
+		position: relative;
+		top: -5px;
+		left: 50px;
+		font-style: italic;
+		font-weight: bolder;
+		text-transform: uppercase;
+		font-size: 13px;
+        text-align: center;
+	}
+    .activity-feed .feed-item .username {
+		display: block;
+		position: relative;
+		top: -5px;
+		left: 50px;
+		font-weight: bolder;
+		font-size: 13px;
+	}
+	.activity-feed .feed-item .text {
+		position: relative;
+		top: 30px;
+	}
+	.mycontainer {
+		width: 700px;
+		height: auto;
+	}
+	.activity-feed input[type="text"] {
+		position: relative;
+		margin-top: 10px;
+		background-color: #000000;
+		-webkit-border-radius: 45px;
+		-moz-border-radius: 45px;
+		border-radius: 45px;
+		font-size: 15px;
+		text-align: center;
+		height: 45px;
+		border: none;
+		padding-left: 15px;
+		width: -webkit-calc(100% - 15px);
+		width: -moz-calc(100% - 15px);
+		width: calc(100% - 15px);
+		margin-bottom: 10px;
+		top: -61px;
+		outline: none;
+	}
+	.activity-feed input[type="text"][placeholder] {
+		color: rgb(210, 210, 210);
+		font-size: 15px;
+		font-weight: 500;
+		border: 2px solid #cc0000;
+		margin-bottom: 20px;
+	}
+	.add-btn{
+		position: relative;
+		border-radius: 45px;
+		font-size: 30px;
+		color: #cc0000;
+		border: 2px solid #cc0000;
+		padding: 8px 12px 4px 12px;
+		background-color: yellow;
+		margin-top: 10px;
+		z-index: 1000;
+		outline: none;
+	}
+	.add-btn:hover{
+		background-color: rgb(233, 217, 0);
+	}
+	.add-btn:active{
+		-webkit-transform: translateY(2px);
+		-moz-transform: translateY(2px);
+		-ms-transform: translateY(2px);
+		-o-transform: translateY(2px);
+		transform: translateX(2px);
+	}
+	.edit-btn{
+		position: relative;
+		border-radius: 45px;
+		font-size: 30px;
+		color: #cc0000;
+		border: 2px solid #cc0000;
+		padding: 8px 12px 4px 12px;
+		background-color: yellow;
+		margin-top: 10px;
+		z-index: 1000;
+		outline: none;
+	}
+	.edit-btn:hover{
+		background-color: rgb(233, 217, 0);
+	}
+	.edit-btn:active{
+		-webkit-transform: translateY(2px);
+		-moz-transform: translateY(2px);
+		-ms-transform: translateY(2px);
+		-o-transform: translateY(2px);
+		transform: translateX(2px);
+	}
+
 </style>
+
 <html>
 	<head> </head>
 	<body>
@@ -160,19 +313,121 @@
 				<img
 					height="150px"
 					width="150px"
-					src="https://ts5.tarafdari.com/contents/user704089/news/hooman_afazeli.jpg"
+					src="https://jamejamonline.ir/Media/Image/1393/08/27/635519132097047406.jpg"
 					alt="profile card"
 				/>
 			</div>
-			<div style="text-align: center; color: yellow; margin-top: -20px">
+			<div
+				style="
+					text-align: center;
+					color: yellow;
+					margin-top: -40px;
+					font-size: xx-large;
+				"
+			>
+				//Username
+			</div>
+			<div style="text-align: center; color: yellow; margin-top: 20px">
 				Joined on Feb 2020
 			</div>
 			<br />
 			<div style="font-size: x-large; color: yellow; margin-top: 20px">
+				<hr style="border: 1px solid yellow; border-radius: 50%; margin: 0 30px 30px 30px;">
 				something about me
 			</div>
 		</div>
-		<div class="container">
+		<div class="activity-body" style="float: right">
+			<h2 style="color: yellow">Activity Feed</h2>
+			<ol class="activity-feed">
+				<div>
+					<button class="add-btn"><i class="fa fa-plus"></i></button>
+					<input placeholder="Add an activity..." type="text"/>
+				</div>
+				<li class="feed-item">
+					<div class="image">
+						<img
+							height="38px"
+							width="38px"
+							src="https://jamejamonline.ir/Media/Image/1393/08/27/635519132097047406.jpg"
+							alt="profile card"
+						/>
+					</div>
+					<time class="date" datetime="9-25">Sep 25</time>
+					<span class="text"
+						>Responded to need
+					>
+				</li>
+				<li class="feed-item">
+					<div class="image">
+						<img
+							height="38px"
+							width="38px"
+							src="https://jamejamonline.ir/Media/Image/1393/08/27/635519132097047406.jpg"
+							alt="profile card"
+						/>
+					</div>
+					<time class="date" datetime="9-24">Sep 24</time>
+					<span class="text">Added an interest “Volunteer Activities”</span>
+				</li>
+				<li class="feed-item">
+					<div class="image">
+						<img
+							height="38px"
+							width="38px"
+							src="https://jamejamonline.ir/Media/Image/1393/08/27/635519132097047406.jpg"
+							alt="profile card"
+						/>
+					</div>
+					<time class="date" datetime="9-23">Sep 23</time>
+					<span class="text"
+						>Joined the group</span
+					>
+				</li>
+				<li class="feed-item">
+					<div class="image">
+						<img
+							height="38px"
+							width="38px"
+							src="https://jamejamonline.ir/Media/Image/1393/08/27/635519132097047406.jpg"
+							alt="profile card"
+						/>
+					</div>
+					<time class="date" datetime="9-21">Sep 21</time>
+					<span class="text"
+						>Responded to need</span
+					>
+				</li>
+				<li class="feed-item">
+					<div class="image">
+						<img
+							height="38px"
+							width="38px"
+							src="https://jamejamonline.ir/Media/Image/1393/08/27/635519132097047406.jpg"
+							alt="profile card"
+						/>
+					</div>
+					<time class="date" datetime="9-18">Sep 18</time>
+					<span class="text"
+						>Created need</span
+					>
+				</li>
+				<li class="feed-item">
+					<div class="image">
+						<img
+							height="38px"
+							width="38px"
+							src="https://jamejamonline.ir/Media/Image/1393/08/27/635519132097047406.jpg"
+							alt="profile card"
+						/>
+					</div>
+					<time class="date" datetime="9-17">Sep 17</time>
+					<span class="text"
+						>Attending the event	</span
+					>
+				</li>
+			</ol>
+		</div>
+		<div class="mycontainer">
 			<div class="row">
 				<div class="col-md-4">
 					<div class="card__container">
@@ -182,7 +437,7 @@
 							<i class="fa fa-gamepad"></i>
 						</div>
 						<div class="card__body">
-							<div class="card__title">//games</div>
+							<div class="card__title">Games</div>
 							<ul>
 								<li>Dota2</li>
 								<li>R6</li>
@@ -205,7 +460,7 @@
 							<i class="fa fa-steam"></i>
 						</div>
 						<div class="card__body">
-							<div class="card__title">//Friends</div>
+							<div class="card__title">Friends</div>
 							<ul>
 								<li>mamad</li>
 							</ul>
@@ -220,7 +475,7 @@
 							<i class="fa fa-cogs"></i>
 						</div>
 						<div class="card__body">
-							<div class="card__title">//system specifications</div>
+							<div class="card__title">System Specifications</div>
 							<ul>
 								<li>RTX 3090</li>
 							</ul>

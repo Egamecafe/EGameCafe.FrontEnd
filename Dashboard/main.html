@@ -272,35 +272,37 @@
 	}
 	.add-btn:hover{
 		background-color: rgb(233, 217, 0);
+		color: #990000;
 	}
 	.add-btn:active{
-		-webkit-transform: translateY(2px);
-		-moz-transform: translateY(2px);
-		-ms-transform: translateY(2px);
-		-o-transform: translateY(2px);
-		transform: translateX(2px);
+		-webkit-transform: translateY(1px);
+		-moz-transform: translateY(1px);
+		-ms-transform: translateY(1px);
+		-o-transform: translateY(1px);
+		transform: translateX(1px);
 	}
 	.edit-btn{
 		position: relative;
 		border-radius: 45px;
 		font-size: 30px;
-		color: #cc0000;
-		border: 2px solid #cc0000;
+		color: yellow;
+		border: 2px solid yellow;
 		padding: 8px 12px 4px 12px;
-		background-color: yellow;
+		background-color: transparent;
 		margin-top: 10px;
 		z-index: 1000;
 		outline: none;
 	}
 	.edit-btn:hover{
 		background-color: rgb(233, 217, 0);
+		color: #990000;
 	}
 	.edit-btn:active{
-		-webkit-transform: translateY(2px);
-		-moz-transform: translateY(2px);
-		-ms-transform: translateY(2px);
-		-o-transform: translateY(2px);
-		transform: translateX(2px);
+		-webkit-transform: translateY(1px);
+		-moz-transform: translateY(1px);
+		-ms-transform: translateY(1px);
+		-o-transform: translateY(1px);
+		transform: translateX(1px);
 	}
 
 </style>
@@ -309,7 +311,8 @@
 	<head> </head>
 	<body>
 		<div class="panel" style="float: right">
-			<div class="profile-card__img">
+			<button class="edit-btn" style="margin-left: -250px;"><i class="fa fa-pencil"></i></button>	
+			<div class="profile-card__img" style="margin-top: -60px;">
 				<img
 					height="150px"
 					width="150px"
@@ -318,7 +321,7 @@
 				/>
 			</div>
 			<div
-				style="
+			style="
 					text-align: center;
 					color: yellow;
 					margin-top: -40px;
@@ -331,8 +334,9 @@
 				Joined on Feb 2020
 			</div>
 			<br />
-			<div style="font-size: x-large; color: yellow; margin-top: 20px">
+			<div style="font-size: x-large; color: yellow; margin-top: 20px; overflow: hidden;">
 				<hr style="border: 1px solid yellow; border-radius: 50%; margin: 0 30px 30px 30px;">
+				<button class="edit-btn"><i class="fa fa-pencil"></i></button>	
 				something about me
 			</div>
 		</div>
@@ -435,6 +439,7 @@
 							Games I've Played
 							<br /><br />
 							<i class="fa fa-gamepad"></i>
+							<button class="edit-btn"><i class="fa fa-pencil"></i></button>
 						</div>
 						<div class="card__body">
 							<div class="card__title">Games</div>
@@ -473,6 +478,7 @@
 							My System
 							<br /><br />
 							<i class="fa fa-cogs"></i>
+							<button class="edit-btn"><i class="fa fa-pencil"></i></button>
 						</div>
 						<div class="card__body">
 							<div class="card__title">System Specifications</div>

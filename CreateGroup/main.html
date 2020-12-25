@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<style>
+	@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+	@import url(https://fonts.googleapis.com/css2?family=Nova+Flat&family=Rye&display=swap);
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	input {
+		outline: none;
+	}
+	html,
+	body {
+		height: 100%;
+	}
+	body {
+		font-family: "Nova Flat", sans-serif;
+		background: -webkit-linear-gradient(45deg, #990000, black),
+			-webkit-linear-gradient(0deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
+		background: -moz-linear-gradient(45deg, #990000, black),
+			-moz-linear-gradient(0deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
+		background: -o-linear-gradient(45deg, #990000, black),
+			-o-linear-gradient(0deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
+		background: linear-gradient(45deg, #990000, black),
+			linear-gradient(90deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
+		height: 100%;
+		margin: 0;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		overflow: scroll;
+	}
+	.panel {
+		width: 75%;
+		min-height: 500px;
+		padding-bottom: 2%;
+		height: auto;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		-webkit-box-shadow: 0 0 10px black;
+		-moz-box-shadow: 0 0 10px black;
+		box-shadow: 0 0 10px #990000;
+		background: #000000;
+		margin: 10px auto;
+		text-align: center;
+	}
+	.panel .state {
+		margin-top: 5px;
+		width: 100%;
+		height: 155px;
+		color: yellow;
+		font-size: 20px;
+	}
+	.panel .state i.fa-ban {
+		font-size: 40px;
+	}
+	.panel .state i.fa-users {
+		margin-bottom: 10px;
+		font-size: 25px;
+		color: yellow;
+		line-height: 33px;
+		height: 30px;
+		width: 30px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		border: 2px solid;
+		padding: 2px;
+	}
+	.panel .state h2 {
+		font-weight: 400;
+	}
+	.panel .form {
+		width: 50%;
+		margin: 5px auto;
+	}
+	.panel .login {
+		height: 45px;
+		width: 100%;
+		background-color: #cc0000;
+		-webkit-border-radius: 45px;
+		-moz-border-radius: 45px;
+		border-radius: 45px;
+		position: relative;
+		line-height: 45px;
+		text-align: center;
+		font-weight: bold;
+		color: yellow;
+		margin-top: 10px;
+		-webkit-transition: background 0.2s;
+		-moz-transition: background 0.2s;
+		-o-transition: background 0.2s;
+		transition: background 0.2s;
+		cursor: pointer;
+	}
+	.panel .login:active {
+		-webkit-transform: translateY(2px);
+		-moz-transform: translateY(2px);
+		-ms-transform: translateY(2px);
+		-o-transform: translateY(2px);
+		transform: translateY(2px);
+	}
+	.panel .login:hover {
+		background-color: #990000;
+	}
+
+	.panel input[type="text"] {
+		background-color: #22232a;
+		-webkit-border-radius: 45px;
+		-moz-border-radius: 45px;
+		border-radius: 45px;
+		font-size: 15px;
+		height: 45px;
+		border: none;
+		padding-left: 15px;
+		width: -webkit-calc(100% - 15px);
+		width: -moz-calc(100% - 15px);
+		width: calc(100% - 15px);
+		margin-bottom: 10px;
+	}
+	.panel input[type="text"][placeholder] {
+		color: rgb(210, 210, 210);
+		font-size: 15px;
+		font-weight: 500;
+	}
+
+	label.btn span {
+		font-size: 1.5em;
+	}
+	[type="radio"]:not(:checked),
+	[type="radio"]:checked {
+		position: absolute;
+		left: -9999px;
+	}
+	label input[type="radio"] ~ i.fa.fa-circle-o {
+		color: yellow;
+		display: inline;
+	}
+	label input[type="radio"] ~ i.fa.fa-dot-circle-o {
+		display: none;
+	}
+	label input[type="radio"]:checked ~ i.fa.fa-circle-o {
+		display: none;
+	}
+	label input[type="radio"]:checked ~ i.fa.fa-dot-circle-o {
+		color: #900;
+		display: inline;
+	}
+	label:hover input[type="radio"] ~ i.fa {
+		color: #900;
+	}
+
+	label input[type="checkbox"] ~ i.fa.fa-square-o {
+		color: yellow;
+		display: inline;
+	}
+	label input[type="checkbox"] ~ i.fa.fa-check-square-o {
+		display: none;
+	}
+	label input[type="checkbox"]:checked ~ i.fa.fa-square-o {
+		display: none;
+	}
+	label input[type="checkbox"]:checked ~ i.fa.fa-check-square-o {
+		color: yellow;
+		display: inline;
+	}
+	label:hover input[type="checkbox"] ~ i.fa {
+		color: yellow;
+	}
+
+	div[data-toggle="buttons"] label.active {
+		color: yellow;
+	}
+
+	div[data-toggle="buttons"] label {
+		display: inline-block;
+		backface-visibility: visible;
+		padding: 6px 12px;
+		margin-bottom: 0;
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 2em;
+		text-align: left;
+		white-space: nowrap;
+		vertical-align: top;
+		cursor: pointer;
+		background-color: none;
+		border: 0px solid #900;
+		border-radius: 3px;
+		color: yellow;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+	}
+
+	div[data-toggle="buttons"] label:hover {
+		color: yellow;
+	}
+
+	div[data-toggle="buttons"] label:active,
+	div[data-toggle="buttons"] label.active {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+</style>
+<div class="panel">
+	<div class="state">
+		<br /><i class="fa fa-users"></i><br />
+		<h1>Create a group</h1>
+	</div>
+	<div class="form">
+		<input style="margin-top: -10px" placeholder="Group Name" type="text" />
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="btn-group btn-group-vertical" data-toggle="buttons">
+						<label class="btn active">
+							<input type="radio" name="gender1" checked /><i
+								class="fa fa-circle-o fa-2x"
+							></i
+							><i class="fa fa-dot-circle-o fa-2x"></i> <span> Public</span>
+						</label>
+						<label class="btn">
+							<input type="radio" name="gender1" /><i
+								class="fa fa-circle-o fa-2x"
+							></i
+							><i class="fa fa-dot-circle-o fa-2x"></i><span> Private</span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br />
+		<div style="color: yellow"><h2>Games</h2></div>
+		<hr
+			style="
+				border: 1px solid yellow;
+				border-radius: 100%;
+				background: yellow;
+				opacity: 90%;
+				margin: 5px 15px 15px 15px;
+			"
+		/>
+		<input placeholder="Game 1" type="text" />
+		<input placeholder="Game 2" type="text" />
+		<input placeholder="Game 3" type="text" />
+		<input placeholder="Game 4" type="text" />
+		<input placeholder="Game 5" type="text" />
+		<hr
+			style="
+				border: 1px solid yellow;
+				border-radius: 100%;
+				background: yellow;
+				opacity: 90%;
+				margin: 5px 15px 15px 15px;
+			"
+		/>
+		<div class="login">Create</div>
+	</div>
+</div>

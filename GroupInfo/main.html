@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<style>
+	@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+	@import url(https://fonts.googleapis.com/css2?family=Nova+Flat&family=Rye&display=swap);
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	input {
+		outline: none;
+	}
+	html,
+	body {
+		height: 100%;
+	}
+	body {
+		font-family: "Nova Flat", sans-serif;
+		background: -webkit-linear-gradient(45deg, #990000, black),
+			-webkit-linear-gradient(0deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
+		background: -moz-linear-gradient(45deg, #990000, black),
+			-moz-linear-gradient(0deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
+		background: -o-linear-gradient(45deg, #990000, black),
+			-o-linear-gradient(0deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
+		background: linear-gradient(45deg, #990000, black),
+			linear-gradient(90deg, rgba(51, 136, 140, 0.3), rgba(87, 240, 240, 0.1));
+		height: 100%;
+		margin: 0;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		overflow: scroll;
+	}
+	.panel {
+		width: 75%;
+		min-height: 500px;
+		padding-bottom: 2%;
+		height: auto;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		-webkit-box-shadow: 0 0 10px black;
+		-moz-box-shadow: 0 0 10px black;
+		box-shadow: 0 0 10px #990000;
+		background: #000000;
+		margin: 10px auto;
+		text-align: center;
+	}
+	.panel .state {
+		margin-top: 5px;
+		width: 100%;
+		height: 155px;
+		color: yellow;
+		font-size: 20px;
+	}
+	.panel .state i.fa-ban {
+		font-size: 40px;
+	}
+	.panel .state i.fa-users {
+		margin-bottom: 10px;
+		font-size: 25px;
+		color: yellow;
+		line-height: 33px;
+		height: 30px;
+		width: 30px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		border: 2px solid;
+		padding: 2px;
+	}
+	.panel .state h2 {
+		font-weight: 400;
+	}
+	.panel .form {
+		width: 50%;
+		margin: 5px auto;
+	}
+	.panel .login {
+		height: 45px;
+		width: 100%;
+		background-color: #cc0000;
+		-webkit-border-radius: 45px;
+		-moz-border-radius: 45px;
+		border-radius: 45px;
+		position: relative;
+		line-height: 45px;
+		text-align: center;
+		font-weight: bold;
+		color: yellow;
+		margin-top: 10px;
+		-webkit-transition: background 0.2s;
+		-moz-transition: background 0.2s;
+		-o-transition: background 0.2s;
+		transition: background 0.2s;
+		cursor: pointer;
+	}
+	.panel .login:active {
+		-webkit-transform: translateY(2px);
+		-moz-transform: translateY(2px);
+		-ms-transform: translateY(2px);
+		-o-transform: translateY(2px);
+		transform: translateY(2px);
+	}
+	.panel .login:hover {
+		background-color: #990000;
+	}
+
+	.panel input[type="text"] {
+		background-color: #22232a;
+		-webkit-border-radius: 45px;
+		-moz-border-radius: 45px;
+		border-radius: 45px;
+		font-size: 15px;
+		height: 45px;
+		border: none;
+		padding-left: 15px;
+		width: -webkit-calc(100% - 15px);
+		width: -moz-calc(100% - 15px);
+		width: calc(100% - 15px);
+		margin-bottom: 10px;
+	}
+	.panel input[type="text"][placeholder] {
+		color: rgb(210, 210, 210);
+		font-size: 15px;
+		font-weight: 500;
+	}
+</style>
+<div class="panel">
+	<div class="state">
+		<br /><i class="fa fa-users"></i><br />
+		<h1>Group Information</h1>
+	</div>
+	<div class="form">
+		<h3 style="color: yellow">Group Name</h3>
+		<hr
+			style="
+				border: 1px solid yellow;
+				border-radius: 100%;
+				background: yellow;
+				opacity: 90%;
+				margin: 5px 15px;
+			"
+		/>
+		<div style="color: yellow"><h1>//groupname</h1></div>
+		<br />
+		<br />
+		<div style="color: yellow"><h3>Group Sharing Link</h3></div>
+		<hr
+			style="
+				border: 0.51px solid yellow;
+				background: yellow;
+				border-radius: 100%;
+				opacity: 90%;
+				margin: 5px 15px;
+			"
+		/>
+		<div style="color: yellow"><h1>//link</h1></div>
+		<br />
+		<br />
+		<div style="color: yellow"><h3>Session Games</h3></div>
+		<hr
+			style="
+				border: 0.5px solid yellow;
+				background: yellow;
+				border-radius: 100%;
+				opacity: 90%;
+				margin: 5px 15px;
+			"
+		/>
+		<h1 style="color: yellow">game1</h1>
+		<h1 style="color: yellow">game2</h1>
+		<h1 style="color: yellow">game3</h1>
+		<h1 style="color: yellow">game4</h1>
+		<br />
+		<div class="login">Create</div>
+	</div>
+</div>
